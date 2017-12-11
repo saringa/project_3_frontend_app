@@ -1,0 +1,8 @@
+<p>
+  booking-list works!
+</p>
+
+
+<div *ngFor="let currentBooking of bookings" class="list-booking">
+  <app-booking-item [booking]="currentBooking"></app-booking-item>
+</div>
