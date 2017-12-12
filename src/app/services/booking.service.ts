@@ -36,6 +36,19 @@ export class BookingService {
       .map((res: Response) => res.json());
   }
 
+  //WORKING ON CONFIRM AND REJECT(NOT AVAILABLE)
+  putBookingConfirmed(booking) {
+    return this.http
+      .put(baseUrl + '/booking/' + booking._id + '/confirmed', booking)
+      .map((res: Response) => res.json());
+  }
+
+  putBookingNotAvailable(booking) {
+    return this.http
+      .put(baseUrl + '/booking/' + booking._id + '/not-available', booking)
+      .map((res: Response) => res.json());
+  }
+
   getBookingById(id) {
     return this.http
       .get(baseUrl + '/booking/' + id)

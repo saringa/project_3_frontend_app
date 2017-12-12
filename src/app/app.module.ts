@@ -19,6 +19,7 @@ import { LoginFormComponent } from './components/login-form/login-form.component
 import { SignupFormComponent } from './components/signup-form/signup-form.component';
 import { BookingListComponent } from './components/booking-list/booking-list.component';
 import { BookingItemComponent } from './components/booking-item/booking-item.component';
+import { BookingAdminComponent } from './components/booking-admin/booking-admin.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'booking', pathMatch: 'full' },
@@ -40,7 +41,8 @@ const routes: Routes = [
     LoginFormComponent,
     SignupFormComponent,
     BookingListComponent,
-    BookingItemComponent
+    BookingItemComponent,
+    BookingAdminComponent
   ],
   imports: [
     BrowserModule,
