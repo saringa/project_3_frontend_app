@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { BookingService } from '../../services/booking.service';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-booking-list',
@@ -7,13 +6,9 @@ import { BookingService } from '../../services/booking.service';
   styleUrls: ['./booking-list.component.css']
 })
 export class BookingListComponent implements OnInit {
-  bookings = [];
+  @Input() bookings = [];
 
-  constructor(private bookingService: BookingService) {}
+  constructor() {}
 
-  ngOnInit() {
-    this.bookingService.getBookingsAvailable().subscribe(data => {
-      this.bookings = data;
-    });
-  }
+  ngOnInit() {}
 }

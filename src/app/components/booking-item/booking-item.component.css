@@ -1,0 +1,10 @@
+.reservations {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  padding: 4%;
+  background-color: mediumturquoise;
+  border-radius: 0 0 60% 60%;
+  margin-bottom: 7px;
+}

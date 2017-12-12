@@ -24,6 +24,12 @@ export class BookingService {
       .map((res: Response) => res.json());
   }
 
+  getBookingsPending() {
+    return this.http
+      .get(baseUrl + '/booking/pending')
+      .map((res: Response) => res.json());
+  }
+
   putBookingRequested(booking) {
     return this.http
       .put(baseUrl + '/booking/' + booking._id + '/request', booking)

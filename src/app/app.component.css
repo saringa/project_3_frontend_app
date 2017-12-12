@@ -1,0 +1,30 @@
+* {
+  font-family: 'Barlow', sans-serif;
+  border: 1px solid black;
+}
+
+.header {
+  height: 50px;
+  font-size: x-large;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+  align-content: center;
+}
+
+.content {
+  position: absolute;
+  top: 77px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  overflow-y: scroll;
+  text-align: center;
+}
+
+.logo {
+  max-width: 45%;
+  height: auto;
+}

@@ -1,10 +1,15 @@
-<div>
-  {{booking.boat.name}}
+<div class=reservations>
+  <div>
+    {{booking.boat.name}}
+  </div>
+  <div>
+    {{booking.boat.captain}}
+  </div>
+  <div>
+    {{booking.boat.pax}}
+  </div>
+  <div>
+    {{booking.boat.location}}
+  </div>
+  <button (click)="request()">Request</button>
 </div>
-<div>
-  {{booking.pax}}
-</div>
-<div>
-  {{booking.boat.location}}
-</div>
-<button (click)="request()">Request</button>

@@ -1,3 +1,4 @@
-<p>
-  admin-page works!
-</p>
+<div *ngFor="let booking of bookings">
+  <app-booking-item [booking]="booking">
+  </app-booking-item>
+</div>
