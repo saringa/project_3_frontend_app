@@ -22,7 +22,7 @@ export class BookingPageComponent implements OnInit {
     });
   }
 
-  private filterByDate() {
+  filterByDate() {
     console.log(this.dateFilter);
     this.bookingsOfTheDay = this.allBookings.filter(elem => {
       const date = elem.date.split('T')[0];
@@ -32,7 +32,7 @@ export class BookingPageComponent implements OnInit {
     });
   }
 
-  private getCurrentDate() {
+  getCurrentDate() {
     const currentDate = new Date();
     const day = currentDate.getDate();
     const month = currentDate.getMonth() + 1;
