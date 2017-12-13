@@ -1,14 +1,17 @@
-<h2>Pending</h2>
+<br>
+<h4>Pending</h4>
 <div *ngFor="let booking of bookingsPending">
   <app-booking-admin [booking]="booking">
   </app-booking-admin>
 </div>
-<h2>Confirmed</h2>
+<br>
+<h4>Confirmed</h4>
 <div *ngFor="let booking of bookingsConfirmed">
   <app-booking-item-status [booking]="booking">
   </app-booking-item-status>
 </div>
-<h2>Rejected</h2>
+<br>
+<h4>Rejected</h4>
 <div *ngFor="let booking of bookingsRejected">
   <app-booking-item-status [booking]="booking">
   </app-booking-item-status>

@@ -1,7 +1,7 @@
 <form (ngSubmit)="filterByDate()" #myForm="ngForm">
-  Search by Date:
-  <input type="date" name="date" [(ngModel)]="dateFilter" />
-  <button type="submit">Search</button>
+  Choose Date:
+  <input class="search-input" type="date" name="date" [(ngModel)]="dateFilter" />
+  <button class="search-btn" type="submit">Search</button>
 </form>
 
 <app-booking-list [bookings]="bookingsOfTheDay">

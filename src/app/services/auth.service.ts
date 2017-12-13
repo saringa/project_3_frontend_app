@@ -51,6 +51,7 @@ export class AuthService {
   me() {
     const options = new RequestOptions();
     options.withCredentials = true;
+
     return this.http
       .get(apiUrl + '/me', options)
       .toPromise()

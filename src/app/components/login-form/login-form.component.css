@@ -5,3 +5,15 @@
 .form-group-actions {
   padding: 2%;
 }
+
+.login-input {
+  border-radius: 9px;
+  border: 2px solid #01ecd5;
+}
+
+.login-btn {
+  border-radius: 9px;
+  background-color: #4586ff;
+  border: 2px solid white;
+  color: white;
+}

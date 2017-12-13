@@ -4,7 +4,19 @@
   flex-wrap: nowrap;
   justify-content: space-around;
   padding: 4%;
-  background-color: mediumturquoise;
-  border-radius: 0 0 60% 60%;
+  background-color: #4586ff;
+  border-radius: 5px 30px;
   margin-bottom: 7px;
+  margin-top: 5px;
+  margin-right: 6px;
+  margin-left: 6px;
+  color: white;
+  font-size: 1em;
+}
+
+.request-btn {
+  background-color: #01ecd5;
+  color: white;
+  border: #f8f9fa 1px solid;
+  border-radius: 9px;
 }

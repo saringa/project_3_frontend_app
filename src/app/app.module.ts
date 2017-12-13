@@ -23,14 +23,38 @@ import { BookingItemComponent } from './components/booking-item/booking-item.com
 import { BookingAdminComponent } from './components/booking-admin/booking-admin.component';
 import { BookingItemStatusComponent } from './components/booking-item-status/booking-item-status.component';
 
+import { AuthGuard } from './guards/auth.guard';
+import { AnonGuard } from './guards/anon.guard';
+import { AdminGuard } from './guards/admin.guard';
+
 const routes: Routes = [
   { path: '', redirectTo: 'bookings', pathMatch: 'full' },
-  { path: 'auth/login', component: LoginPageComponent },
-  { path: 'auth/signup', component: SignupPageComponent },
-  { path: 'admin', component: AdminPageComponent },
-  { path: 'bookings', component: BookingPageComponent },
-  { path: 'booking/:id', component: BookingDetailPageComponent },
-  { path: 'my-bookings', component: ProfilePageComponent }
+  {
+    path: 'auth/login',
+    canActivate: [AnonGuard],
+    component: LoginPageComponent
+  },
+  {
+    path: 'auth/signup',
+    canActivate: [AnonGuard],
+    component: SignupPageComponent
+  },
+  { path: 'admin', canActivate: [AdminGuard], component: AdminPageComponent },
+  {
+    path: 'bookings',
+    canActivate: [AuthGuard],
+    component: BookingPageComponent
+  },
+  {
+    path: 'booking/:id',
+    canActivate: [AuthGuard],
+    component: BookingDetailPageComponent
+  },
+  {
+    path: 'my-bookings',
+    canActivate: [AuthGuard],
+    component: ProfilePageComponent
+  }
 ];
 
 @NgModule({
@@ -56,7 +80,7 @@ const routes: Routes = [
     BrowserModule,
     RouterModule.forRoot(routes)
   ],
-  providers: [BookingService, AuthService],
+  providers: [BookingService, AuthService, AuthGuard, AnonGuard, AdminGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
