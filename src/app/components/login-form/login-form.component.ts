@@ -24,7 +24,7 @@ export class LoginFormComponent {
     this.authService
       .login(this.user)
       .subscribe(
-        () => this.router.navigate(['/bookings']),
+        () => this.router.navigate(['/my-bookings']),
         err => (this.error = err)
       );
   }

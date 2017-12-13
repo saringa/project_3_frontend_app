@@ -19,8 +19,9 @@ export class BookingAdminComponent implements OnInit {
 
   confirm() {
     this.bookingService.putBookingConfirmed(this.booking).subscribe(
-      () => {
-        this.router.navigate(['/booking', this.booking._id]);
+      data => {
+        this.router.navigate(['/admin']);
+        console.log(data);
       },
       err => console.log(err)
     );
@@ -28,8 +29,9 @@ export class BookingAdminComponent implements OnInit {
 
   reject() {
     this.bookingService.putBookingNotAvailable(this.booking).subscribe(
-      () => {
-        this.router.navigate(['/booking', this.booking._id]);
+      data => {
+        this.router.navigate(['/admin']);
+        console.log(data);
       },
       err => console.log(err)
     );

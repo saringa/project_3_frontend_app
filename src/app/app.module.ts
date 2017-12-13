@@ -11,6 +11,7 @@ import { SignupPageComponent } from './pages/signup-page/signup-page.component';
 import { AdminPageComponent } from './pages/admin-page/admin-page.component';
 import { BookingPageComponent } from './pages/booking-page/booking-page.component';
 import { BookingDetailPageComponent } from './pages/booking-detail-page/booking-detail-page.component';
+import { ProfilePageComponent } from './pages/profile-page/profile-page.component';
 
 import { BookingService } from './services/booking.service';
 import { AuthService } from './services/auth.service';
@@ -20,14 +21,16 @@ import { SignupFormComponent } from './components/signup-form/signup-form.compon
 import { BookingListComponent } from './components/booking-list/booking-list.component';
 import { BookingItemComponent } from './components/booking-item/booking-item.component';
 import { BookingAdminComponent } from './components/booking-admin/booking-admin.component';
+import { BookingItemStatusComponent } from './components/booking-item-status/booking-item-status.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'booking', pathMatch: 'full' },
+  { path: '', redirectTo: 'bookings', pathMatch: 'full' },
   { path: 'auth/login', component: LoginPageComponent },
   { path: 'auth/signup', component: SignupPageComponent },
   { path: 'admin', component: AdminPageComponent },
   { path: 'bookings', component: BookingPageComponent },
-  { path: 'booking/:id', component: BookingDetailPageComponent }
+  { path: 'booking/:id', component: BookingDetailPageComponent },
+  { path: 'my-bookings', component: ProfilePageComponent }
 ];
 
 @NgModule({
@@ -42,7 +45,9 @@ const routes: Routes = [
     SignupFormComponent,
     BookingListComponent,
     BookingItemComponent,
-    BookingAdminComponent
+    BookingAdminComponent,
+    BookingItemStatusComponent,
+    ProfilePageComponent
   ],
   imports: [
     BrowserModule,

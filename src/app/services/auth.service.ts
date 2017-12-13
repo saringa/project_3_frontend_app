@@ -7,8 +7,9 @@ import 'rxjs/add/operator/toPromise';
 import 'rxjs/add/operator/catch';
 
 import { User } from '../models/user';
+import { environment } from '../../environments/environment';
 
-const apiUrl = 'http://localhost:3000/auth';
+const apiUrl = environment.apiUrl + '/auth';
 
 @Injectable()
 export class AuthService {

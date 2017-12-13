@@ -9,13 +9,21 @@ import { BookingService } from '../../services/booking.service';
   styleUrls: ['./admin-page.component.css']
 })
 export class AdminPageComponent implements OnInit {
-  bookings = [];
+  bookingsPending = [];
+  bookingsConfirmed = [];
+  bookingsRejected = [];
 
   constructor(private bookingService: BookingService) {}
 
   ngOnInit() {
     this.bookingService.getBookingsPending().subscribe(data => {
-      this.bookings = data;
+      this.bookingsPending = data;
+    });
+    this.bookingService.getBookingsConfirmed().subscribe(data => {
+      this.bookingsConfirmed = data;
+    });
+    this.bookingService.getBookingsRejected().subscribe(data => {
+      this.bookingsRejected = data;
     });
   }
 }
