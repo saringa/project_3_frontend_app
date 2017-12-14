@@ -14,11 +14,15 @@ const apiUrl = environment.apiUrl + '/auth';
 @Injectable()
 export class AuthService {
   private user: User;
+  private userChange: Subject<User | null> = new Subject();
+
+  userChange$ = this.userChange.asObservable();
 
   constructor(private http: Http) {}
 
   private setUser(user: User = null) {
     this.user = user;
+    this.userChange.next(user);
   }
 
   signup(user: User) {
@@ -65,5 +69,9 @@ export class AuthService {
           this.setUser();
         }
       });
+  }
+
+  getUser() {
+    return this.user;
   }
 }

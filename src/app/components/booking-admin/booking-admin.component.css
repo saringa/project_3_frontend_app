@@ -1,6 +1,6 @@
 .reservations {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: nowrap;
   justify-content: space-around;
   padding: 4%;
@@ -17,14 +17,14 @@
 .confirm-btn {
   border-radius: 9px 0px 0px 9px;
   color: white;
-  background-color: green;
+  background-color: lightseagreen;
   font-size: smaller;
 }
 
 .reject-btn {
   border-radius: 0px 9px 9px 0px;
   color: white;
-  background-color: red;
+  background-color: palevioletred;
   font-size: smaller;
 }
 

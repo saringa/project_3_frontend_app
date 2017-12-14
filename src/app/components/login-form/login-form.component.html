@@ -11,4 +11,8 @@
     <button class=login-btn (click)="login()">Login</button>
     <p *ngIf="error" class="error">{{error}}</p>
   </div>
+  <div>
+    <p>Want to join?</p>
+    <a [routerLink]="['/auth/signup']">Click here to Create Account</a>
+  </div>
 </form>

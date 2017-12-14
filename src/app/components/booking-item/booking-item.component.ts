@@ -20,7 +20,7 @@ export class BookingItemComponent implements OnInit {
   request() {
     this.bookingService.putBookingRequested(this.booking).subscribe(
       () => {
-        this.router.navigate(['/booking', this.booking._id]);
+        this.router.navigate(['/my-bookings']);
       },
       err => console.log(err)
     );

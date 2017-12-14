@@ -1,5 +1,6 @@
 .form-group-field {
   padding: 2%;
+  display: inline-grid;
 }
 
 .form-group-actions {
@@ -16,4 +17,7 @@
   background-color: #4586ff;
   border: 2px solid white;
   color: white;
+  padding: 7px 20px;
+  width: 16em;
+  margin-bottom: 10%;
 }

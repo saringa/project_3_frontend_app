@@ -1,16 +1,18 @@
 <div class=reservations>
   <div>
+    Request from: {{booking.user.username}}
+  </div>
+  <div>
     {{booking.boat.name}}
   </div>
   <div>
     {{booking.boat.captain}}
   </div>
   <div>
-    {{booking.boat.pax}}
+    Location: {{booking.boat.location}}
   </div>
   <div>
-    {{booking.boat.location}}
+    <button class="confirm-btn" (click)="confirm()">Confirm</button>
+    <button class="reject-btn" (click)="reject()">Reject</button>
   </div>
-  <button class="confirm-btn" (click)="confirm()">Confirm</button>
-  <button class="reject-btn" (click)="reject()">Reject</button>
 </div>

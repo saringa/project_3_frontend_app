@@ -1,26 +1,34 @@
-<!--The content below is only a placeholder and can be replaced.-->
-​
-
-
 <link href="https://fonts.googleapis.com/css?family=Bungee" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Barlow" rel="stylesheet">
-
-
-
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
   crossorigin="anonymous">
-
 <div class="topnav" id="myTopnav">
+  <!-- <a [routerLink]="['/my-bookings']">{{booking.user.username}} Bookings</a>
+  <a [routerLink]="['/my-bookings']"></a> -->
+  <!-- <button (click)="logout()">Logout</button> -->
   <div class="header">
     <img class="logo" src="./assets/78947.svg" alt="logo">
     <div class="title">BoatBooking</div>
+    <a (click)="logout()" *ngIf="!!user">Logout</a>
   </div>
+
   <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+  <!-- <script>
+    function myFunction() {
+      var x = document.getElementById("myTopnav");
+      if (x.className === "topnav") {
+        x.className += " responsive";
+      } else {
+        x.className = "topnav";
+      }
+    }
+  </script> -->
 </div>
 
 <div class="content">
   <router-outlet></router-outlet>
 </div>
+
 
 <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
   crossorigin="anonymous"></script> -->
